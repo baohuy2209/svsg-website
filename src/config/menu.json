@@ -1,0 +1,83 @@
+{
+    "main": [
+        {
+            "name": "Trang chủ", 
+            "url": "/",
+            "hasChildren": false, 
+            "children": []
+        }, 
+        {
+            "name": "Bài viết", 
+            "url": "/blogs",
+            "hasChildren": false, 
+            "children": []
+        }, 
+        {
+            "name": "Liên hệ", 
+            "url": "/contact",
+            "hasChildren": false, 
+            "children": []
+        }, 
+        {
+            "name": "Giới thiệu", 
+            "url": "/about",
+            "hasChildren": false, 
+            "children": []
+        }, 
+        {
+            "name": "Sự kiện", 
+            "url": "/events",
+            "hasChildren": false, 
+            "children": []
+        }
+    ], 
+    "footer": [
+        {
+            "name": "Company", 
+            "menu": [
+                {
+                    "name": "About", 
+                    "url": "/about"
+                }, 
+                {
+                    "name": "Contact", 
+                    "url": "/contact"
+                }
+            ]
+        }, 
+        {
+            "name": "Legal", 
+            "menu": [
+                {
+                    "name": "Terms", 
+                    "url": "/terms"
+                }, 
+                {
+                    "name": "Privacy", 
+                    "url": "/privacy"
+                }
+            ]
+        }, 
+        {
+            "name": "Support", 
+            "menu": [
+                {
+                    "text": "FAQ", 
+                    "url": "/faq"
+                }, 
+                {
+                    "text": "Help Center", 
+                    "url": "/help-center"
+                }, 
+                {
+                    "text": "Term & Conditions", 
+                    "url": "#"
+                }, 
+                {
+                    "text": "Privacy Policy", 
+                    "url": "#"
+                }
+            ]
+        }
+    ]
+}

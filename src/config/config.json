@@ -1,0 +1,32 @@
+{
+    "site": {
+        "title": "SVSG Lab UEL", 
+        "base_url": "/", 
+        "favicon": "/logo/svsg-logo.jfif", 
+        "logo": "/logo/svsg-logo.jfif",
+        "logo_width": "200",
+        "logo_height": "48",
+        "logo_text": "SVSG UEL" 
+    }, 
+    "settings": {
+        "pagination": 4, 
+        "summary_length": 200, 
+        "blog_folder": "blogs" 
+    }, 
+    "nav_button": {
+        "enable": true, 
+        "label": "Get started", 
+        "link": "/contact" 
+    }, 
+    "params": {
+        "contact_form_actions": "", 
+        "tag_manager_id": "", 
+        "footer_content": "SVSG (SAP Vietnamese Student Group) Lab là phòng nghiên cứu và học tập về lĩnh vực SAP tại Trường Đại học Kinh tế - Luật (UEL) - DHQG TP.HCM", 
+        "copyright": "© 2025 SVSG (SAP Vietnamese Student Group) Lab. All rights reserved."
+    }, 
+    "metadata": {
+        "meta_author": "Nguyen Bao Huy", 
+        "meta_image": "", 
+        "meta_description": "The website of SVSG Lab"
+    }
+}
