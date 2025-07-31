@@ -47,9 +47,9 @@ export const getSinglePage = (folder: string) => {
 
 // get regular page data, ex: about.md 
 export const getRegularPage = async (slug: string) => {
-    const publishedPages = getSinglePage("content"); 
+    const publishedPages = getSinglePage("src/content"); 
     const pageData = publishedPages.filter((data) => data.slug === slug); 
-    const notFoundPage = fs.readFileSync(path.join("content/404.md"), "utf-8"); 
+    const notFoundPage = fs.readFileSync(path.join("src/content/404.md"), "utf-8"); 
     const notFoundDataParsed = matter(notFoundPage); 
     let frontmatter, content; 
     if(pageData[0]){

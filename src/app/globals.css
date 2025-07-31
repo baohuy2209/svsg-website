@@ -76,6 +76,9 @@
   --sidebar-accent-foreground: oklch(0.205 0 0);
   --sidebar-border: oklch(0.922 0 0);
   --sidebar-ring: oklch(0.708 0 0);
+  --text-color-default: #777; 
+  --text-color-dark: #222;
+  --background-body: #fff;
 }
 
 .dark {
@@ -110,13 +113,23 @@
   --sidebar-accent-foreground: oklch(0.985 0 0);
   --sidebar-border: oklch(1 0 0 / 10%);
   --sidebar-ring: oklch(0.556 0 0);
+  --text-color-default: #777;
+  --text-color-dark: #222;
 }
 
 @layer base {
-  * {
-    @apply border-border outline-ring/50;
+  html {
+    @apply text-[16px];
+    font-family: var(--font-lato);
   }
+  
   body {
-    @apply bg-background text-foreground;
+    @apply bg-[var(--background-body)] font-[var(--font-lato)] font-normal leading-relaxed text-[var(--text-color-default)];
+  }
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-[var(--font-lato)] font-bold leading-tight text-[var(--text-color-dark)];
+  } 
+  h1, .h1{
+    @apply font-[var(--font-lato)] text-h1-sm md:text-h1;
   }
 }

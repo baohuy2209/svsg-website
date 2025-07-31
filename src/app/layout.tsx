@@ -5,6 +5,18 @@ import Header from "@/components/header/Header";
 import config from "@/config/config.json";
 import theme from "@/config/theme.json";
 import Providers from "@/components/Provider";
+import { Lato, Roboto } from 'next/font/google';
+const lato = Lato({
+  subsets: ['latin'],
+  weight: ['400', '700'],
+  variable: '--font-lato',
+});
+
+const roboto = Roboto({
+  subsets: ['latin'],
+  weight: ['400', '700'],
+  variable: '--font-roboto',
+});
 export const metadata: Metadata = {
   title: "SVSG Lab UEL",
   description: "Author by Nguyen Bao Huy",
@@ -18,7 +30,7 @@ export default function RootLayout({
   const pf = theme.fonts.font_family.primary;
   const sf = theme.fonts.font_family.secondary;
   return (
-    <html suppressHydrationWarning={true} lang="en">
+    <html suppressHydrationWarning={true} lang="en" className={`${lato.variable} ${roboto.variable}`}>
       <head>
         {/* responsive meta */}
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5"/>
