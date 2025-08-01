@@ -1,7 +1,7 @@
 @import "tailwindcss";
 @import "tw-animate-css";
 
-@custom-variant dark (&:is(.dark *));
+/* @custom-variant dark (&:is(.dark *)); */
 
 @theme inline {
   --color-background: var(--background);
@@ -45,6 +45,17 @@
 
 :root {
   --radius: 0.625rem;
+  --h1: 3.0517578125rem;
+  --h2: 2.44140625rem;
+  --h3: 1.953125rem;
+  --h4: 1.5625rem;
+  --h5: 1.25rem;
+  --h6: 1rem;
+  --witdh-button: 110%;
+  --height-button: 110%;
+  --padding-button: 17px;
+  --round-button: 30px;
+  --translate-button: -50%; 
   --background: oklch(1 0 0);
   --foreground: oklch(0.145 0 0);
   --card: oklch(1 0 0);
@@ -78,7 +89,7 @@
   --sidebar-ring: oklch(0.708 0 0);
   --text-color-default: #777; 
   --text-color-dark: #222;
-  --background-body: #fff;
+  --background-body: #ffffff;
 }
 
 .dark {
@@ -113,8 +124,6 @@
   --sidebar-accent-foreground: oklch(0.985 0 0);
   --sidebar-border: oklch(1 0 0 / 10%);
   --sidebar-ring: oklch(0.556 0 0);
-  --text-color-default: #777;
-  --text-color-dark: #222;
 }
 
 @layer base {
@@ -124,12 +133,80 @@
   }
   
   body {
-    @apply bg-[var(--background-body)] font-[var(--font-lato)] font-normal leading-relaxed text-[var(--text-color-default)];
+    @apply font-primary font-normal leading-relaxed text-[var(--text-color-default)];
   }
   h1, h2, h3, h4, h5, h6 {
-    @apply font-[var(--font-lato)] font-bold leading-tight text-[var(--text-color-dark)];
+    @apply font-primary font-bold leading-tight text-[var(--text-color-dark)];
   } 
   h1, .h1{
-    @apply font-[var(--font-lato)] text-h1-sm md:text-h1;
+    @apply font-primary text-h1-sm md:text-h1;
   }
+  h2, .h2{
+    @apply text-h2-sm md:text-h2;
+  }
+  h3, .h3{
+    @apply text-h3-sm md:text-h3;
+  }
+  h4, .h4{
+    @apply text-h4;
+  }
+  h5, .h5{
+    @apply text-h5;
+  }
+  h6, .h6{
+    @apply text-h6;
+  }
+  code{
+    @apply before:hidden after:hidden;
+  }
+}
+@layer components{
+  .btn {
+    @apply inline-block font-primary font-bold border px-7 py-[var(--padding-button)] leading-[18px] transition;
+  }
+  .btn-primary{
+    @apply bg-primary text-white border-transparent z-[1]  rounded-[var(--round-button)] relative hover:shadow-[0_12px_24px_-6px_rgba(45,67,121,.1)] transition-all;
+  }
+  .btn-primary:after{
+    @apply w-full h-full rounded-[var(--round-button)] absolute left-1/2 top-1/2 translate-x-[var(--translate-button)]  translate-y-[var(--translate-button)] content-[''] bg-primary transition-all duration-300 ease-in-out -z-[1];
+  }
+  .btn-primary:hover::after{
+    @apply w-[var(--witdh-button)] h-[var(--height-button)];
+  }
+  .btn-outline-primary{
+    @apply relative text-[var(--text-color-default)] border-0 bg-transparent rounded-[var(--round-button)] hover:border-transparent hover:text-primary;
+  }
+}
+@utility bg-primary {
+  @apply bg-[var(--background-body)];
+}
+@utility font-primary {
+  @apply font-[var(--font-lato)];
+}
+@utility text-h6 {
+  @apply text-[var(--h6)]; 
+}
+@utility text-h5 {
+  @apply text-[var(--h5)]; 
+}
+@utility text-h4 {
+  @apply text-[var(--h4)]; 
+}
+@utility text-h3 {
+  @apply text-[var(--h3)]; 
+}
+@utility text-h2 {
+  @apply text-[var(--h2)]; 
+} 
+@utility text-h1{
+  @apply text-[var(--h1)];
+}
+@utility text-h1-sm {
+  @apply text-[var(--h2)];
+}
+@utility text-h2-sm {
+  @apply text-[var(--h3)];
+}
+@utility text-h3-sm {
+  @apply text-[var(--h4)];
 }

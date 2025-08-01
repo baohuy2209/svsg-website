@@ -2,10 +2,10 @@
     "site": {
         "title": "SVSG Lab UEL", 
         "base_url": "/", 
-        "favicon": "/logo/svsg-logo.jfif", 
-        "logo": "/logo/svsg-logo.jfif",
-        "logo_width": "200",
-        "logo_height": "48",
+        "favicon": "/logo/svsg-logo.png", 
+        "logo": "/logo/svsg-logo.png",
+        "logo_width": "100",
+        "logo_height": "20",
         "logo_text": "SVSG UEL" 
     }, 
     "settings": {
