@@ -1,11 +1,11 @@
 {
     "site": {
-        "title": "SVSG Lab UEL", 
+        "title": "SGSV", 
         "base_url": "/", 
         "favicon": "/logo/svsg-logo.png", 
         "logo": "/logo/svsg-logo.png",
         "logo_width": "100",
-        "logo_height": "20",
+        "logo_height": "100",
         "logo_text": "SVSG UEL" 
     }, 
     "settings": {
